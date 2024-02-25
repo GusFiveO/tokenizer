@@ -1,11 +1,14 @@
 The first choice i had to do was wich type of token:
-	- I could go for a simple token that can represent value, they are the most common token they also know as cryptocurrency.
+	
+ 	- I could go for a simple token that can represent value, they are the most common token they also know as cryptocurrency.
 	- But i choose NFTs (non fungible token), they are used to represent something unique such as a piece of art or in-game collectible.
+
 NFT was for me a more vague for me so was more of a challenge
 
 Now that i choose NFTs i need to choose the blockchain where i will deploy my smart contract on.
 They are several point that help you choose one:
-	- First the blockchain need to let you write smart contract for NFT 
+	
+ 	- First the blockchain need to let you write smart contract for NFT 
 		- for example Bitcoin blockchain really let you create NFTs but Ordinals that are just a way to store datas on the blockchain
 	- Then you can make a choice based on the popularity of the Blockchain
 		- Ethereum is the leader in termes of NFTs
