@@ -9,13 +9,13 @@ Now that i choose NFTs i need to choose the blockchain where i will deploy my sm
 They are several point that help you choose one:
 	
  	- First the blockchain need to let you write smart contract for NFT 
-		- for example Bitcoin blockchain really let you create NFTs but Ordinals that are just a way to store datas on the blockchain
+		- for example Bitcoin blockchain dont really let you create NFTs but Ordinals that are just a way to store datas on the blockchain
 	- Then you can make a choice based on the popularity of the Blockchain
 		- Ethereum is the leader in termes of NFTs
 			- Solana is a newcomer in the ecosystem (2020) and have strength and weakness
 
 	- You can also choose a blockchain on the fees associated
-		- For exemple Solana could be a good option on thise criteria because it have very low fees
+		- For exemple Solana could be a good option on those criteria because it have very low fees
 	
 	- Efficiency can be a good criteria
 		- Solana in addition to be cheap is also super efficient
