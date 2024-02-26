@@ -3,7 +3,7 @@ The first choice i had to do was wich type of token:
  	- I could go for a simple token that can represent value, they are the most common token they also know as cryptocurrency.
 	- But i choose NFTs (non fungible token), they are used to represent something unique such as a piece of art or in-game collectible.
 
-NFT was for me a more vague for me so was more of a challenge
+NFT was more vague for me so was more of a challenge
 
 Now that i choose NFTs i need to choose the blockchain where i will deploy my smart contract on.
 They are several point that help you choose one:
