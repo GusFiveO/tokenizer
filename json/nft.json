@@ -1,0 +1,16 @@
+{
+    "name": "Drip Salopette",
+    "description": "Ceci est le nft du drip originel",
+    "image": "ipfs://bafybeifuyiw5smg6bmhyz6hs5yyem4gxk23a46lugs6ygj23mh26luwtde/",
+    "attributes": [
+      {
+        "trait_type": "Drip",
+        "value": "salopette"
+      },
+      {
+        "trait_type": "Rarete",
+        "value": "Commun"
+      }
+    ]
+  }
+  

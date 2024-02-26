@@ -2,7 +2,6 @@
 // Compatible with OpenZeppelin Contracts ^5.0.0
 pragma solidity ^0.8.20;
 
-// import "@openzeppelin/contracts/token/common/ERC2981.sol";
 import "@openzeppelin/contracts/interfaces/IERC2981.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
@@ -22,11 +21,22 @@ contract Drip is ERC721URIStorage, IERC2981, Ownable {
         override
         returns (address receiver, uint256 royaltyAmount)
     {
-        return (_tokenRoyaltyReceivers[_tokenId], _tokenRoyaltyAmounts[_tokenId]);
+        return (_tokenRoyaltyReceivers[_tokenId], (_salePrice * _tokenRoyaltyAmounts[_tokenId]) / 10000);
+    }
+
+    function mintNFTWithRoyalty(address recipient, string memory tokenURI, address royaltyReceiver, uint256 feeNumerator)
+        public onlyOwner
+        returns (uint256) {
+        require(feeNumerator <= 10000, "Invalid fee numerator");
+
+        uint256 tokenId = mintNFT(recipient, tokenURI);
+        _setTokenRoyalty(tokenId, royaltyReceiver, feeNumerator);
+
+        return tokenId;
     }
 
     function mintNFT(address recipient, string memory tokenURI)
-        public onlyOwner
+        private onlyOwner
         returns (uint256) {
         _tokenIds.increment();
 
@@ -34,16 +44,7 @@ contract Drip is ERC721URIStorage, IERC2981, Ownable {
         _safeMint(recipient, newItemId);
         _setTokenURI(newItemId, tokenURI);
 
-      return newItemId;
-    }
-
-    function mintNFTWithRoyalty(address recipient, string memory tokenURI, address royaltyReceiver, uint96 feeNumerator)
-        public onlyOwner
-        returns (uint256) {
-        uint256 tokenId = mintNFT(recipient, tokenURI);
-        _setTokenRoyalty(tokenId, royaltyReceiver, feeNumerator);
-
-        return tokenId;
+        return newItemId;
     }
 
     function _setTokenRoyalty(
@@ -58,3 +59,4 @@ contract Drip is ERC721URIStorage, IERC2981, Ownable {
         _tokenRoyaltyAmounts[tokenId] = feeNumerator;
     }
 }
+
