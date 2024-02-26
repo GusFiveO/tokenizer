@@ -40,4 +40,4 @@ Remix IDE is a powerful online development environment for Ethereum smart contra
 ## Conclusion
 That's how I successfully deployed a smart contract using Remix IDE on the Sepolia test network. Now I can utilize the deployed contract's functionalities on the Sepolia Ethereum blockchain.
 
-**Contract Address:** [0xcaD1d41810507AD3ff6F0ADeb6f92966Df268A96](https://sepolia.etherscan.io/tx/0xcaD1d41810507AD3ff6F0ADeb6f92966Df268A96)
+**Contract Address:** [0xcaD1d41810507AD3ff6F0ADeb6f92966Df268A96](https://sepolia.etherscan.io/address/0xcaD1d41810507AD3ff6F0ADeb6f92966Df268A96)
